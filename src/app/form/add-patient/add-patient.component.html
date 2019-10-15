@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+          <form #patientForm="ngForm" (ngSubmit)="addPatient(patientForm.value)">
+            <div class="form-group">
+              <label for="">Enter name:</label>
+              <input class="form-control" type="text" name="name" ngModel>
+            </div>
+            <div class="form-group">
+              <label for="">Enter contact:</label>
+              <input class="form-control" type="text" name="cont" ngModel>
+            </div>
+            <div class="form-group">
+              <label for="">Description:</label>
+              <textarea class="form-control" name="descr" ngModel  cols="30" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="">Select building:</label>
+              <select class="form-control" name="building" ngModel>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="">Enter room:</label>
+              <input class="form-control" type="text" name="room" ngModel>
+            </div>
+            <div class="form-group">
+              <label for="">Enter bed no:</label>
+              <input class="form-control" type="text" name="bed" ngModel>
+            </div>
+            <input type="submit" value="Add patient" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
