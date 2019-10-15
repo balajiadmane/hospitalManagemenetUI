@@ -5,7 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class UserDetailsService {
 
-  constructor() { }
+  constructor() { 
+    if(window.localStorage.getItem('user') ===null){
+      window.localStorage.setItem("user",JSON.stringify({
+        id:"",
+        token:""
+      }))
+    }
+    
+  }
 
   /**
    * 

@@ -20,13 +20,19 @@
             <td>{{pt.descr}}</td>
             <td>{{pt.building}}</td>
             <td>{{pt.room}}</td>
+            <td>{{pt.bill}}
+              <p class="text-info" *ngIf="pt.bill === null"> <i class="fa fa-inr" aria-hidden="true"></i>
+                0.0 </p>
+            </td>
             <td><button (click)="AddBills(pt)" data-toggle="modal" data-target="#billModel"
-                class="btn btn-info btn-sm">Add
+                class="btn btn-info btn-sm"><i class="fa fa-plus" aria-hidden="true"></i>
+
                 Bills</button></td>
             <td><button class="btn btn-warning btn-sm" *ngIf="pt.state === 'FALSE'" [disabled]="pt.state === 'FALSE'"
                 (click)="releasePatient(pt)">Released</button>
               <button class="btn btn-success btn-sm" *ngIf="pt.state != 'FALSE'"
-                (click)="releasePatient(pt)">Release</button>
+                (click)="releasePatient(pt)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                Release</button>
             </td>
           </tr>
         </tbody>
@@ -55,13 +61,20 @@
               <td>{{pt.descr}}</td>
               <td>{{pt.building}}</td>
               <td>{{pt.room}}</td>
+              <td> <i class="fa fa-inr" aria-hidden="true"></i>
+                {{pt.bill}}
+
+                
+              </td>
               <td><button (click)="AddBills(pt)" [disabled]="pt.state === 'FALSE'" data-toggle="modal" data-target="#billModel"
-                  class="btn btn-info btn-sm">Add
+                  class="btn btn-info btn-sm"><i class="fa fa-plus" aria-hidden="true"></i>
+
                   Bills</button></td>
               <td><button class="btn btn-warning btn-sm" *ngIf="pt.state === 'FALSE'" [disabled]="pt.state === 'FALSE'"
                   (click)="releasePatient(pt)">Released</button>
                 <button class="btn btn-success btn-sm" *ngIf="pt.state != 'FALSE'"
-                  (click)="releasePatient(pt)">Release</button>
+                  (click)="releasePatient(pt)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                  Release</button>
               </td>
             </tr>
           </tbody>

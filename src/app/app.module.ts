@@ -13,6 +13,7 @@ import { RegistrHostpitalComponent } from './form/registr-hostpital/registr-host
 import {HospitalService} from './service/hospital.service';
 import { LoginHospitalComponent } from './form/login-hospital/login-hospital.component';
 import { HospitalComponent } from './component/hospital/hospital.component';
+import {UserDetailsService} from './service/user-details.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { HospitalComponent } from './component/hospital/hospital.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [PatientService,HospitalService],
+  providers: [PatientService,HospitalService,UserDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

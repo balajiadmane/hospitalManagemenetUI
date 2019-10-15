@@ -17,6 +17,7 @@ export class LoginHospitalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.localStorage.clear();
   } 
   loginHospital(form) : void {
       this.hospital.loginHospital(form).subscribe(

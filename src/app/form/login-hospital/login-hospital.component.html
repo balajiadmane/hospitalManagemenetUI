@@ -1,10 +1,8 @@
 <div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
+  <div class="col-md-3"></div>
+  <div class="col-md-5">
     <div class="card" id="loginFrame">
-      <div class="card-header">
-
-      </div>
+    
       <div class="card-body">
           <form class="" #login="ngForm" (ngSubmit)="loginHospital(login.value)">
               <div class="form-group">
@@ -16,11 +14,10 @@
                 <input class="form-control" type="password" name="password" ngModel>
               </div>
               <input type="submit" value="Login" class="btn btn-primary">
+              <a routerLink="regiserHospital" style="float: right;" class="text-info">New Hospital</a>
           </form>
       </div>
-      <div class="card-footer">
-
-      </div>
+     
     </div>
   </div>
   <div class="col-md-4"></div>

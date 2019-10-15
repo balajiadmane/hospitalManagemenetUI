@@ -21,6 +21,10 @@ export class HospitalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+      this.patientLists();
+  }
+
+  patientLists() : void {
     this.patient.patientList().subscribe(
       (response) => {
         console.log(response);
@@ -33,7 +37,6 @@ export class HospitalComponent implements OnInit {
       }
     )
   }
-
   AddBills(patient): void {
     this.patientIdBills = patient.id;
   }
@@ -61,7 +64,8 @@ export class HospitalComponent implements OnInit {
     }
     this.hospital.releasePatient(patient).subscribe(
       (response)=>{
-        this.toaster.successToastr(response.msg,"Success!")
+        this.toaster.successToastr(response.msg,"Success!");
+        this.patientLists();
       },
       (error)=>{
         this.toaster.errorToastr("Error","Error!");

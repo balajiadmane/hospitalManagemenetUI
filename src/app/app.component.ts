@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {UserDetailsService} from './service/user-details.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hospital';
+
+  constructor(
+    private userservice:UserDetailsService
+  ){
+    console.log(this.userservice.isUserLoggedIn());
+  }
 }

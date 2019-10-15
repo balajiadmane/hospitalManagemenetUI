@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 })
 export class PatientService {
 
-  private url :any  = "http://localhost:5000/users";
-  private urlH:any ="http://localhost:5000/hospital";
+  private url :any  = "http://52.66.197.146:5000/users";
+  private urlH:any ="http://52.66.197.146:5000/hospital";
   constructor(
     private http:HttpClient
   ) { }
